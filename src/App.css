@@ -76,6 +76,11 @@ body{
   padding-bottom: 220px;
 
 }
+.agregado{
+  color: #0d7e1a;
+  height: 30px;
+  margin-top: 3px;
+}
 footer{
   overflow: hidden;
   position: absolute;

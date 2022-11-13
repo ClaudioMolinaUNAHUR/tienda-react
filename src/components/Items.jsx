@@ -1,5 +1,5 @@
-import React from 'react'
-import { useContext } from 'react';
+import React, { useEffect } from 'react'
+import { useContext , useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { CarroContext } from '../context/CarritoProvider';
 
@@ -9,10 +9,18 @@ const Items = ({item, data}) => {
 
     const {agregarItem, sumarCantidad} = useContext(CarroContext)
 
+    const [exito, setSeAgrego] = useState(false)
+
+    useEffect(()=>{
+        setTimeout(() => {
+            setSeAgrego(false)
+        }, 2000);
+    },[exito])
+
     const seleccionarProducto = (id) => {
         const producto = data.find(  item => 
-            item.id === id)        
-
+            item.id === id)    
+        setSeAgrego(true)
         if(!producto.cantidad && producto.cantidad !== 1){
             producto.cantidad = 1
             agregarItem(producto)
@@ -34,12 +42,15 @@ const Items = ({item, data}) => {
                         <p className="descripcion"><small>{description.substring(0, 50)+"..."}</small></p>
                         <p>${price}</p>
                     </div>
-                    <Button
-                        onClick={() => seleccionarProducto(id)}
-                        className='mx-3 mb-3'
-                        variant="primary">
-                                Agregar al carrito
-                    </Button>{' '}
+                    <div className='d-flex aling-items-center'>
+                        <Button
+                            onClick={() => seleccionarProducto(id)}
+                            className='mx-3 mb-4 d-block'
+                            variant="primary">
+                                    Agregar al carrito
+                        </Button>{' '}
+                        <div className='mx-3 mb-1 agregado'>{exito && "Agregado al Carrito"}</div>   
+                    </div>                 
                 </div>
             </div>
         </div>    
