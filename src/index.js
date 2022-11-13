@@ -1,17 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+
+import Footer from './components/Footer';
+import Main from './components/Main';
+import Search from './routes/Search';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import './index.css';
+import './App.css';
+import Carrito from './routes/Carrito';
+
+import CarritoProvider from './context/CarritoProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  <BrowserRouter>
+    <CarritoProvider>
+      <Routes> {/* Routes: dentro va a contener Route */}
+        <Route path='/' element={<App />}>  {/* ruta padre y sus anidadas */}
+              <Route index element={<Main />}/> 
+              <Route path='search' element={<Search/>}/>
+              <Route path='carrito' element={<Carrito/>}/>
+        </Route>
+      </Routes>
+    <Footer/>
+    </CarritoProvider>
+  </BrowserRouter>
+)
