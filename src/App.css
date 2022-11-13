@@ -56,7 +56,7 @@
 }
 .signos{
   font-weight:900;
-  font-size: 30px;
+  font-size: 2em;
   padding: 0px 15px 5px 15px!important;
 }
 .descripcion{
@@ -126,6 +126,10 @@ li{
   }
   .busqueda{
     max-width: 90vw;
+  }
+  .signos{
+   font-size: calc(100% - 2px);
+   padding: 0px 5px 2px 5px!important;
   }
 
   

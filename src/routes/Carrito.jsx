@@ -24,7 +24,7 @@ const Carrito = () => {
 
     return (
         <>
-        <Table className='margin-top ' bordered>
+        <Table className='margin-top' bordered>
           <thead>
               <tr>
               <th>Cantidad</th>
