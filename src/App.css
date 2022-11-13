@@ -142,3 +142,11 @@ li{
 
   
 }
+@media (max-width: 533px) {
+  .card-flex{
+    width:40vw;
+    margin: 0 15px 0 15px;
+  }
+
+  
+}

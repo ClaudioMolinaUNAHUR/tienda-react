@@ -3,7 +3,7 @@ import React from 'react'
 const Card = ({url, titulo}) => {
   return (
     <>
-        <div className="card card-pcpal entrecard" >
+        <div className="card card-pcpal entrecard card-flex" >
             <div className="row g-0">
                 <div className="col-md-4">
                 <img src={url} className="img-fluid rounded-start" alt="..."/>
