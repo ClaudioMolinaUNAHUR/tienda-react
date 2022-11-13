@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 
 
-import Footer from './components/Footer';
 import Main from './components/Main';
 import Search from './routes/Search';
 
@@ -24,9 +23,8 @@ root.render(
               <Route index element={<Main />}/> 
               <Route path='search' element={<Search/>}/>
               <Route path='carrito' element={<Carrito/>}/>
-        </Route>
+        </Route>    
       </Routes>
-    <Footer/>
     </CarritoProvider>
   </BrowserRouter>
 )

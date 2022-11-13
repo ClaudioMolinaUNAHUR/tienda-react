@@ -37,7 +37,14 @@ const CarritoProvider = ({children}) => {
     }
        
     return (
-        <CarroContext.Provider value={{setCarrito, sumarCantidad, eliminarProducto, agregarItem, carrito, catMen, catWomen}}> {/* se define que valores se van a proveer, x eso es Provider. Se pasa un Objeto con sus funciones */}
+        <CarroContext.Provider
+          value={{setCarrito,
+          sumarCantidad,
+          eliminarProducto,
+          agregarItem,
+          carrito,
+          catMen,
+          catWomen}}> {/* se define que valores se van a proveer, x eso es Provider. Se pasa un Objeto con sus funciones */}
             {children} {/* valor recibidos x props descructurado provistos por value de Provider*/}
         </CarroContext.Provider>
     )

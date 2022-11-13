@@ -15,8 +15,8 @@ const Items = ({item, data}) => {
 
         if(!producto.cantidad && producto.cantidad !== 1){
             producto.cantidad = 1
-          agregarItem(producto)
-          return
+            agregarItem(producto)
+            return
         }
         sumarCantidad(producto)
       }
@@ -30,7 +30,7 @@ const Items = ({item, data}) => {
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title font-600">{title+"..."}</h5>
+                        <h5 className="card-title font-600">{title}</h5>
                         <p className="descripcion"><small>{description.substring(0, 50)+"..."}</small></p>
                         <p>${price}</p>
                     </div>

@@ -60,10 +60,10 @@ const Search = () => {
                 let buscar = searchParams.get('buscar') //obtener datos de parametos con esa key
                 if(!buscar){ //si esta vacio, no hay busqueda, entonces pinta todo el data traido de la api
                     return true
-                }else if(buscar === "men's clothing"){
-                    return item.category === "men's clothing"
-                }else if(buscar === "women's clothing"){
-                    return item.category === "women's clothing"
+                }else if(buscar === catMen){
+                    return item.category === catMen
+                }else if(buscar === catWomen){
+                    return item.category === catWomen
                 }
                 let title = item.title.toLowerCase() //un dato de fetch para comparar
                 return title.startsWith(buscar.toLowerCase()) //si ese dato coincide en sus primeras letras con la busqueda de params

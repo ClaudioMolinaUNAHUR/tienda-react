@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
   /* eslint-disable jsx-a11y/anchor-is-valid */
@@ -7,9 +9,9 @@ const Footer = () => {
       <footer className='bg-secondary text-light'>
         <article>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Carrito</a></li>
-                <li><a href="">Contacto</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="carrito">Carrito</Link></li>
+                <li><Link to="search">Buscar</Link></li>
             </ul>
         </article>
         <article>
