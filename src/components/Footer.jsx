@@ -27,7 +27,7 @@ const Footer = () => {
         </article>
     </footer>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

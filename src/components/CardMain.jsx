@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({url, titulo}) => {
+const CardMain = ({url, titulo}) => {
   return (
     <>
         <div className="card card-pcpal entrecard card-flex" >
@@ -16,7 +16,7 @@ const Card = ({url, titulo}) => {
             </div>
         </div>    
     </>
-  )
-}
+  );
+};
 
-export default Card
+export default CardMain;

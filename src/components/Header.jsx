@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React,{ useContext } from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import {CarroContext} from '../context/CarritoProvider'
+import React,{ useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import {CarroContext} from '../context/CarritoProvider';
 const Header = () => {
     
-    const {catMen, catWomen} = useContext(CarroContext)
+    const {catMen, catWomen} = useContext(CarroContext);
     
     return (
         <>
@@ -37,7 +37,7 @@ const Header = () => {
             </nav>
             
         </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

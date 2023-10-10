@@ -3,16 +3,16 @@
 import React, { useContext } from 'react';
 import {useSearchParams } from 'react-router-dom';
 import {useFetch} from '../hooks/useFetch'
-import Items from '../components/Items';
+import CardItem from '../components/CardItem';
 import {CarroContext} from '../context/CarritoProvider';
 
 const Search = () => {
 
-    const {catMen , catWomen} = useContext(CarroContext)
+    const {catMen , catWomen} = useContext(CarroContext);
     
-    let [searchParams, setSearchParams] = useSearchParams()
+    let [searchParams, setSearchParams] = useSearchParams();
 
-    const {data, error, loading} = useFetch(`https://fakestoreapi.com/products`)
+    const {data, error, loading} = useFetch(`https://fakestoreapi.com/products`);
         
     if(loading){
         return (<h2 className="margin-top container w-75 mb-5">Loading...</h2>);
@@ -72,7 +72,7 @@ const Search = () => {
                     <div 
                         className='mb-4'
                         key={item.id}>
-                        <Items
+                        <CardItem
                             data={data}
                             item={item}
                         />                        
@@ -80,7 +80,7 @@ const Search = () => {
             ))}
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Search
+export default Search;
